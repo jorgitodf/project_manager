@@ -1,0 +1,25 @@
+{
+    "name": "jorgito/framework",
+    "authors": [
+        {
+            "name": "jorgitodf",
+            "email": "jspaiva.1977@gmail.com"
+        }
+    ],
+    "require": {
+        "pimple/pimple": "^3.2",
+        "symfony/http-foundation": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Framework\\": "src",
+            "App\\": "app"
+        }
+    },
+    "scripts": {
+        "server": "php -S localhost:8000 -t public"
+    },
+    "config": {
+        "process-timeout": 0
+    }
+}
