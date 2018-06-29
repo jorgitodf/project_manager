@@ -2,24 +2,16 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-$router = new App\Framework\Router;
-
 require __DIR__.'/config/containers.php';
+require __DIR__.'/config/events.php';
+
+$app = new App\Framework\App($container);
+
+$router = $app->getRouter();
+
+require __DIR__.'/config/middlewares.php';
 require __DIR__.'/config/routes.php';
 
+$app->run();
 
-try {
-
-    $result = $router->run();
-    $response = new App\Framework\Response;
-    $params = [
-        'container' => $container,
-        'params'    => $result['params']
-    ];
-    
-    $response($result['action'], $params);
-
-} catch (\App\Framework\Exceptions\HttpException $e) {
-    echo json_encode(['error' => $e->getMessage()]);
-}
 

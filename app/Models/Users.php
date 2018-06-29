@@ -11,6 +11,7 @@ class Users
     public function __construct(Container $container)
     {
         $this->db = $container['db'];
+        $this->events = $container['events'];
     }
 
 
@@ -20,5 +21,12 @@ class Users
         $stmt->execute([$id]);
 
         return $stmt->fetch(\PDO::FETCH_ASSOC);
+    }
+
+    public function create(array $date)
+    {
+        $this->events->trigger('creating.users', null, $data);
+        // inserir no banco aqui
+        $this->events->trigger('created.users', null, $data);
     }
 }
