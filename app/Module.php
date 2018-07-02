@@ -15,21 +15,21 @@ class Module implements Contract
 
     public function getContainerConfig()
     {
-        return __DIR__.'/config/containers.php';
+        return __DIR__ . '/config/containers.php';
     }
 
     public function getEventConfig()
     {
-        return __DIR__.'/config/events.php';
+        return __DIR__ . '/config/events.php';
     }
 
     public function getMiddlewareConfig()
     {
-        return __DIR__.'/config/middlewares.php';
+        return __DIR__ . '/config/middlewares.php';
     }
 
     public function getRouteConfig()
     {
-        return __DIR__.'/config/routes.php';
+        return __DIR__ . '/config/routes.php';
     }
 }
