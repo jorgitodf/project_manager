@@ -9,7 +9,7 @@ class Module implements Contract
     public function getNamespaces():array
     {
         return [
-            'App\\Framework\\Tasks' => __DIR__.'/src'
+            'App\\Framework\\Tasks\\' => __DIR__.'/src'
         ];
     }
 
