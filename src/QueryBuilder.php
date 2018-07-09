@@ -15,7 +15,7 @@ class QueryBuilder
 
     public function insert(string $table, array $data)
     {
-        $this->sql = "INSERT INTO {$table} (%s) VALUES (%s)";
+        $sql = "INSERT INTO {$table} (%s) VALUES (%s)";
 
         $columns = array_keys($data);
         $values = array_fill(0, count($columns), '?');
