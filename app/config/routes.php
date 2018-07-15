@@ -2,7 +2,7 @@
 
 
 $router->add('GET', '/', function() use ($container) {
-    return "Estamos na HomePage";
+    return file_get_contents(__DIR__ . '/../../template/index.html');
 });
 
 $router->add('GET', '/users', '\App\Controllers\UsersControllers::index');
