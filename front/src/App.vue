@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <example></example>
+    <e-header></e-header>
     <router-view/>
   </div>
 </template>
 
 <script>
-import Example from './components/Example';
+import Header from './partials/Header';
 export default {
   name: 'App',
   components: {
-    'example': Example
+    'e-header': Header
   }
 }
 </script>
