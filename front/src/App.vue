@@ -1,27 +1,32 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <e-header></e-header>
-    <router-view/>
-  </div>
+    <v-content>
+      <v-container grid-list-md>
+        <router-view/>
+      </v-container>
+    </v-content>
+    <v-footer app>
+      <span>&copy; <a href="#">School of Net - {{year}}</a></span>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import Header from './partials/Header';
-export default {
-  name: 'App',
-  components: {
-    'e-header': Header
+  import Header from './partials/Header';
+  export default {
+    name: 'App',
+    computed: {
+      year() {
+        return (new Date()).getFullYear();
+      }
+    },
+    components: {
+      'e-header': Header
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
