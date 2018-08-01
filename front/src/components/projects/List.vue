@@ -7,7 +7,7 @@
         </v-card-title>
         <v-card-text>Lorem Ipsum</v-card-text>
         <v-card-actions>
-          <v-btn flat dark> Ver + </v-btn>
+          <v-btn flat dark :to="'/projects/' + n"> Ver + </v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
