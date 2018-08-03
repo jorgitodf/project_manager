@@ -9,10 +9,10 @@
           jalskdjflkasjdflk
         </v-card-text>
         <v-card-text>
-          // lista de tarefas
+          <tasks/>
         </v-card-text>
         <v-card-text>
-          // adicionar tarefas
+          <create-task></create-task>
         </v-card-text>
       </v-card>
     </v-flex>
@@ -24,9 +24,13 @@
 
 <script>
 import create from './Create'
+import tasks from '../tasks/List'
+import tasksCreate from '../tasks/Create'
 export default {
   components: {
-    create
+    create,
+    tasks,
+    'create-task': tasksCreate
   }
 }
 </script>
