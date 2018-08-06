@@ -14,10 +14,11 @@
 </template>
 
 <script>
+import {eventHub} from '../../eventHub';
 export default {
   methods: {
     open(n) {
-      console.log(n);
+      this.$emit('open-task', n);
     }
   }
 }
