@@ -1,4 +1,5 @@
 <?php
 
-$router->add('GET', '/tasks', 'App\Framework\Tasks\Controllers\TasksController::index');
+$router->add('GET', '/api/projects', 'App\Framework\Tasks\Controllers\ProjectsController::index');
+$router->add('POST', '/api/projects', 'App\Framework\Tasks\Controllers\ProjectsController::create');
 
