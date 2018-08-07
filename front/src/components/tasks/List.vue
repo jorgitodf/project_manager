@@ -18,7 +18,7 @@ import {eventHub} from '../../eventHub';
 export default {
   methods: {
     open(n) {
-      this.$emit('open-task', n);
+      eventHub.$emit('open-task', n);
     }
   }
 }

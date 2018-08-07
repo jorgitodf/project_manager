@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     submit() {
-      this.data.due_date = this.data.due_date + ' ' + this.due_date_time + ':00';
+      this.data.due_date = this.due_date + ' ' + this.due_date_time + ':00';
       console.log(this.data);
     }
   }
