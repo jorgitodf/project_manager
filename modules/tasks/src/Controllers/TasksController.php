@@ -2,10 +2,12 @@
 
 namespace App\Framework\Tasks\Controllers;
 
-class TasksController 
+use App\Framework\CrudController;
+
+class TasksController extends CrudController
 {
-    public function index()
+    protected function getModel(): string
     {
-        return 'Lista de Tarefas';
+        return 'tasks_model';
     }
 }
