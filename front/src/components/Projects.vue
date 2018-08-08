@@ -24,8 +24,7 @@
       }
     },
     mounted() {
-      console.log('Estamos Prontos para Trabalhar');
-      //document.querySelector('h1.red').innerHTML = 'Olá Mundo';
+      this.$store.dispatch('projects/getAll');
     }
   }
 </script>
