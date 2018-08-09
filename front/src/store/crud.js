@@ -3,7 +3,7 @@ import _ from 'underscore';
 const qs = require('qs');
 
 
-export default function (url) {
+export default function (endpoint) {
     const state = {
       all: []
     }
@@ -27,14 +27,19 @@ export default function (url) {
     }
 
     const actions = {
-      getAll(context) {
+      getAll(context, id) {
+        let url = endpoint;
+        if (id) {
+          url += '?id=' + id;
+        }
+
         return axios.get(url).then((res) => {
           context.commit('updateAll', res.data);
         })
       },
       create(context, data) {
         data = qs.stringify(data);
-        return axios.post(url, data).then((res) => {
+        return axios.post(endpoint, data).then((res) => {
           context.commit('merge', res.data);
         });
       }

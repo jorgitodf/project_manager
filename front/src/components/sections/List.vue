@@ -9,14 +9,14 @@
           {{ section.description }}
         </v-card-text>
         <v-card-text>
-          <tasks/>
+          <tasks :section="section.id"/>
         </v-card-text>
         <v-card-text>
-          <create-task></create-task>
+          <create-task :section="section.id"></create-task>
         </v-card-text>
       </v-card>
     </v-flex>
-    <v-flex>
+    <v-flex xs3>
       <create/>
     </v-flex>
   </v-layout>
@@ -39,7 +39,7 @@ export default {
     'create-task': tasksCreate
   },
   mounted() {
-    this.$store.dispatch('sections/getAll');
+    this.$store.dispatch('sections/getAll', this.$route.params.id);
   }
 }
 </script>
