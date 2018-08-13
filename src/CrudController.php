@@ -23,8 +23,7 @@ abstract class CrudController
 
     public function create($container, $request)
     {
-        
-        return $container[$this->getModel()]->create($request->request->all());
+          return $container[$this->getModel()]->create($request->request->all());
     }
 
     public function update($container, $request)

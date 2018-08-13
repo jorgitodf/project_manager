@@ -25,6 +25,10 @@ class ComposerStaticInitb44665566fb5c71ad4baee4f91b7bca4
         array (
             'Psr\\Container\\' => 14,
         ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
         'A' => 
         array (
             'App\\Framework\\' => 14,
@@ -47,6 +51,10 @@ class ComposerStaticInitb44665566fb5c71ad4baee4f91b7bca4
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'App\\Framework\\' => 
         array (

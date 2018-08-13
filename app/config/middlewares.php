@@ -8,6 +8,6 @@ $app->addMiddleware('before', function($c) {
     header('Content-Type text/html');
 });
 
-$app->addMiddleware('after', function($c) {
+$app->addMiddleware('before', function($c) {
     
 });
