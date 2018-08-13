@@ -35,3 +35,5 @@ $container['db'] = function ($c){
 $container['users_model'] = function ($container) {
     return new \App\Models\Users($container);
 };
+
+return $container;

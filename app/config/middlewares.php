@@ -5,7 +5,7 @@ $app->addMiddleware('before', function($c) {
 });
 
 $app->addMiddleware('before', function($c) {
-    header('Content-Type text/html');
+    header('Content-Type: text/html');
 });
 
 $app->addMiddleware('before', function($c) {
