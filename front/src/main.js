@@ -10,6 +10,8 @@ import store from './store';
 
 Vue.config.productionTip = false
 
+// eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1MzQyNTM1ODUsImV4cCI6MTUzNDMzOTk4NSwidXNlciI6eyJpZCI6IjkiLCJuYW1lIjoiTHVjaWFuYSBGXHUwMGU5bGl4IiwiZW1haWwiOiJsdWNpYW5hQGdtYWlsLmNvbSIsImNyZWF0ZWQiOm51bGwsIm1vZGlmaWVkIjpudWxsfX0.dr4Ga5ffSe713Lbs5aorhcZl28GZ0D-JV_n2qE1Pibg
+
 Vue.use(Vuetify);
 
 /* eslint-disable no-new */

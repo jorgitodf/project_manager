@@ -6,4 +6,9 @@ $router->add('GET', '/', function () {
 
 $router->add('POST', '/auth/register', '\App\Controllers\UsersControllers::register');
 $router->add('POST', '/auth/token', '\App\Controllers\UsersControllers::getToken');
-$router->add('GET', '/api/me', '\App\Controllers\UsersControllers::getCurrentUser');
+$router->add('GET', '/api/me', function($container) {
+    header('Content-Type: application/json');
+    $data = (new \App\Controllers\UsersControllers)->getCurrentUser($container);
+
+    return $data;
+});

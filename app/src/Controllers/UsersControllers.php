@@ -37,21 +37,25 @@ class UsersControllers
         return ['token' => $token];
     }
 
-    public function getCurrentUser($container, $request)
+    public function getCurrentUser($container)
     {
         $token = getallheaders()['Authorization'] ?? null;
+
         if (!$token) {
             $token = filter_input(\INPUT_GET, 'token');
         }
+
         if (!$token) {
             throw new HttpException("Forbidden", 401);
         }
+
         try {
             $key = 'SECRET KEY';
             $data = JWT::decode($token, $key, ['HS256']);
         } catch(\Exception $e) {
             throw new HttpException("Forbidden", 401);
         }
+
         return (array)$data;
     }
 }
