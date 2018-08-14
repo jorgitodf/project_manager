@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Framework\Exceptions\HttpException;
-use Firebase\JWt\JWT;
+use Firebase\JWT\JWT;
 
 class UsersControllers
 {

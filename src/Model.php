@@ -105,7 +105,7 @@ abstract class Model
             if (method_exists($this, $method)) {
                 $data[$field] = $this->$method($value);
             }
-            return $data;
         }
+        return $data;
     }
 }
