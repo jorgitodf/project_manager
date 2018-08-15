@@ -9,5 +9,5 @@ $router->add('POST', '/api/sections', 'App\Framework\Tasks\Controllers\SectionsC
 $router->add('GET', '/api/tasks', 'App\Framework\Tasks\Controllers\TasksController::listByProject');
 $router->add('POST', '/api/tasks', 'App\Framework\Tasks\Controllers\TasksController::create');
 
-$router->add('GET', '/api/subtasks', 'App\Framework\Tasks\Controllers\SubTasksController::index');
+$router->add('GET', '/api/subtasks', 'App\Framework\Tasks\Controllers\SubTasksController::listByTask');
 $router->add('POST', '/api/subtasks', 'App\Framework\Tasks\Controllers\SubTasksController::create');
