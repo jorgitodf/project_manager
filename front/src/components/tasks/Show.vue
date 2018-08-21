@@ -63,8 +63,8 @@ export default {
         this.$refs.form.reset();
       });
     },
-    ckecked(subtask) {
-      this.$store.dispatch('subtasks/checked', subtasks);
+    checked(subtask) {
+      this.$store.dispatch('subtasks/checked', subtask);
     }
   },
   mounted() {
