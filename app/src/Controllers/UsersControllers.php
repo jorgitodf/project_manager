@@ -30,7 +30,7 @@ class UsersControllers
         unset($user['password']);
 
         $key = 'SECRET KEY';
-        $data = ['iat' => time(), 'exp' => time() + (60 * 60 * 24), 'user' => $user];
+        $data = ['iat' => time(), 'exp' => time() + (60 * 60 * 365), 'user' => $user];
 
         $token = JWT::encode($data, $key);
         
