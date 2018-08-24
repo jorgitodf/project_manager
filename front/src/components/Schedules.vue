@@ -79,6 +79,9 @@ export default {
         this.date = date.toISOString().substr(0, 10);
       }, 200);
     }
+  },
+  mounted() {
+    this.$store.dispatch('schedules/getAll');
   }
 }
 </script>
