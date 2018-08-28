@@ -1,5 +1,10 @@
 import axios from 'axios';
+import store from './store';
 
 window.axios = axios;
+const token = window.localStorage.getItem('token');
 
-window.axios.defaults.headers.common['Authorization'] = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1MzUxMzE0MzEsImV4cCI6MTUzNjQ0NTQzMSwidXNlciI6eyJpZCI6IjkiLCJuYW1lIjoiTHVjaWFuYSBGXHUwMGU5bGl4IiwiZW1haWwiOiJsdWNpYW5hQGdtYWlsLmNvbSIsImNyZWF0ZWQiOm51bGwsIm1vZGlmaWVkIjpudWxsfX0.02Lc70fAzHYZI6SUHWv8OOO6di-_moQPXK18jbLNgak';
+if (token) {
+  window.axios.defaults.headers.common['Authorization'] = token;
+  store.commit('auth/updateLogged', true);
+}

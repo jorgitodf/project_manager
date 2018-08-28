@@ -202,7 +202,7 @@ CREATE TABLE IF NOT EXISTS `schedules` (
   INDEX `fk_schedules_projects1_idx` (`user_id` ASC),
   CONSTRAINT `fk_schedules_projects1`
     FOREIGN KEY (`user_id`)
-    REFERENCES `projects` (`id`)
+    REFERENCES `users` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

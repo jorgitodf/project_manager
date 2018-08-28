@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import { eventHub } from '../../eventHub';
 export default {
   props: [
     'date'
@@ -41,6 +42,7 @@ export default {
       this.$store.dispatch('schedules/create', this.data).then(() => {
         this.$refs.form.reset();
         this.due_date_time = null;
+        eventHub.$emit('schedules_created');
       })
     }
   }
